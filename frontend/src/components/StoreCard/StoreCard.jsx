@@ -1,6 +1,7 @@
 import React from 'react'
 import "./StoreCard.scss";
 import { useNavigate } from 'react-router-dom';
+import locationImg from '../../assets/location.png';
 
 function StoreCard({ name, location, id }) {
 
@@ -10,7 +11,7 @@ function StoreCard({ name, location, id }) {
     <div className='storeCard' onClick={() => navigate(`/store/${id}`)}>
       <div className="info">
       <p className='name'>{name}</p>
-      <p className='location'>( {location} )</p>
+      <p className='location'><img src={locationImg} alt="" /> {location}</p>
       </div>
         <div className="visit">
             <span className='visitText'>Visit</span>

@@ -1,7 +1,7 @@
 .storeCard{
     width: 22%;
     max-width: 180px;
-    height: 22%;
+    height: 150px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,7 +27,17 @@
         justify-content: center;
 
         .name{
+            font-size: 1.1rem;
             font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .location{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            color: rgb(64, 64, 64);
         }
     }
 
@@ -37,7 +47,9 @@
         cursor: pointer;
 
         .info{
-            color: #00416a;
+            .name{
+                color: #00416a;
+            }
         }
 
         .visit{
@@ -67,5 +79,15 @@
     .storeCard{
         width: 45%;
         flex-direction: column;
+
+        .visit{
+            .visitText{
+                opacity: 1;
+                animation: blink 0.3s ease-in-out;
+                font-weight: 500;
+            }
+        }
     }
+
+
 }

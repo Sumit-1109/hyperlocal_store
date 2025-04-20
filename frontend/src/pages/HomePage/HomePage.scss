@@ -15,9 +15,16 @@
     }
 
     .storeList{
-        flex: 1;
         display: flex;
         flex-wrap: wrap;
         gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .homePage{
+        .searchBar-container{
+            justify-content: center;
+        }
     }
 }

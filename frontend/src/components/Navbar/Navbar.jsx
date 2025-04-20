@@ -20,7 +20,7 @@ function Navbar() {
 
           console.log(data);
 
-          const cartItems = data.map((item) => ({
+          const cartItems = data.filter((item) => item.product !== null).map((item) => ({
             id: item.product._id,
             name: item.name,
             price: item.price,

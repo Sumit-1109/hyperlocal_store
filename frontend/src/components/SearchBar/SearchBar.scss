@@ -29,6 +29,7 @@
           }
 
           button {
+
             margin-left: 0.5rem;
             border: none;
             color: white;
@@ -36,14 +37,20 @@
             border-radius: 50%;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.2s ease;
-      
-            &:hover {
-              transform: scale(1.1);
+
+            img{
+              width: 1.5rem;
+              height: 1.5rem;
+
+              &:hover {
+                transform: scale(1.1);
+              }
+        
+              &:active {
+                transform: scale(0.95);
+              }
             }
-      
-            &:active {
-              transform: scale(0.95);
-            }
+            
           }
     }
 }

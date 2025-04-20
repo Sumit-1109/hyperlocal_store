@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './SearchBar.scss';
+import search from '../../assets/search.png';
 
 function SearchBar({ placeholder, onSearch }) {
   const [query, setQuery] = useState('');
@@ -18,7 +19,7 @@ function SearchBar({ placeholder, onSearch }) {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
-      <button type="submit">🔍</button>
+      <button type="submit"><img src={search} alt="" /></button>
     </form>
     </div>
   );
