@@ -1,0 +1,49 @@
+.cartPage{
+    flex: 1;
+    display: flex;
+    padding: 4% 6% 0 6%;
+    gap: 5%;
+
+    .cart-summary{
+        padding-inline: 2%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 5%;
+        overflow-y: auto;
+    }
+
+    .order-section{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding-bottom: 10%;
+
+        .total-price{
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: whitesmoke;
+            border: 1px wheat solid;
+            padding: 15px;
+            font-size: 1.25rem;
+        }
+
+        .error-message{
+            height: 2rem;
+            width: 100%;
+            text-align: center;
+            font-family: 1rem;
+            color: rgb(126, 3, 3);
+        }
+
+        .order-btn{
+            width: 70%;
+            padding: 12px;
+            font-size: 1.25rem;
+        }
+    }
+}

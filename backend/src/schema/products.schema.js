@@ -11,8 +11,7 @@ const ProductSchema = new mongoose.Schema({
         type : Number,
     },
     storeName : {
-        type : mongoose.Schema.Types.ObjectId,
-        ref : 'Store',
+        type: String,
     }
 });
 

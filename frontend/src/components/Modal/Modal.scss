@@ -1,0 +1,41 @@
+.modalContainer{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+
+    .modalBox{
+        width: 30%;
+        height: 30%;
+        background-color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        border: 1px black solid;
+
+        input{
+            width: 70%;
+            padding: 10px;
+            border-radius: 8px;
+            outline: none;
+            border: 1px solid black;
+        }
+
+        button {
+            padding-block: 8px;
+            width: 100%;
+            border-radius: 8px;
+            outline: none;
+            border: 1px solid black;
+            margin-bottom: 2px;
+        }
+    }
+}

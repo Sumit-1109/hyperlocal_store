@@ -1,0 +1,61 @@
+.storeCard{
+    width: 22%;
+    max-width: 180px;
+    height: 22%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 25px 15px;
+    transform-origin: center;
+    will-change: transform;
+
+    border: 2px solid rgb(233, 233, 193);
+    background: white;
+    border-radius: 16px;
+    transition: transform 0.3s ease-in-out;
+
+    font-family: "Special Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+    .info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &:hover {
+        background:  linear-gradient(to bottom, #FFEFBA, #FFFFFF);
+        transform: scale(1.025);
+        cursor: pointer;
+
+        .info{
+            color: #00416a;
+        }
+
+        .visit{
+            .visitText{
+                opacity: 1;
+                animation: blink 0.3s ease-in-out;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .visit{
+        .visitText{
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+    }
+}
+
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0.85; }
+  }
+  

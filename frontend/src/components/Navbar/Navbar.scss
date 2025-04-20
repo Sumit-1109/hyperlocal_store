@@ -1,0 +1,45 @@
+.navbar {
+  height: 10%;
+  border-bottom: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 3.5%;
+
+  .storeName {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: 1.5rem;
+    color: bisque;
+  }
+
+  .cart-div{
+    position: relative;
+
+    .cartImg {
+        width: 2rem;
+        height: 2rem;
+        object-fit: contain;
+        cursor: pointer;
+    }
+
+    .totalItems{
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      background-color: #0083B0;
+      color: white;
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: 700;
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

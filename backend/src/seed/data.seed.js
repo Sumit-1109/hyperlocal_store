@@ -27,7 +27,7 @@ const seedDB = async () => {
                     name: product.name,
                     price: product.price,
                     quantity: product.quantity,
-                    storeName: store._id,
+                    storeName: store.name,
                 });
             }
         }

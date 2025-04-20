@@ -1,0 +1,23 @@
+.storePage{
+    display: flex;
+    flex-direction: column; 
+    flex: 1;
+    padding: 3% 6% 0 6%;
+
+    .storeName{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 2rem;
+        padding-left: 40%;
+    }
+
+    .productsList{
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6%;
+        padding-top: 3%;
+}
+}
