@@ -73,12 +73,10 @@ function StorePage() {
               <ProductCard key={product._id} name={product.name} price={product.price} quantity={product.quantity} id={product._id} />
             ))
           ) : (
-            products.length > 0 ? (
+            products.length > 0 && (
               products.map((product) => (
                 <ProductCard key={product._id} name={product.name} price={product.price} quantity={product.quantity} id={product._id} />
               ))
-            ) : (
-              <span>No Products Found !!</span>
             )
           )
         }

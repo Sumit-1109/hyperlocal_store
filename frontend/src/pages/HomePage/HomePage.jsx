@@ -64,12 +64,10 @@ function HomePage() {
               <ProductCard key={product._id} name={product.name} price={product.price} id={product._id} />
             ))
         ) : (
-          stores.length > 0 ? (
+          stores.length > 0 && (
             stores.map((store) => (
               <StoreCard key={store._id} name={store.name} location={store.location} id={store._id} />
             ))
-          ) : (
-            <span>No Stores Found !!</span>
           )
         )
       }

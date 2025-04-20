@@ -22,9 +22,9 @@ function ProductCard({ name, price, id, quantity }) {
   return (
     <div className='productCard'>
       <div className="productInfo">
-        <p>{name}</p>
+        <p className='name'>{name}</p>
         <p className='price'>Rs.{price}</p>
-        <p>In Stock : {quantity}</p>
+        <p className='quantity'>In Stock : {quantity}</p>
       </div>
       <button className="addToCart" onClick={handleAddToCart}>Add to Cart</button>
     </div>
