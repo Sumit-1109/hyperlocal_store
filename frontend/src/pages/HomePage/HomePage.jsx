@@ -37,6 +37,7 @@ function HomePage() {
     }, []);
 
     const handleSearch = async (query) => {
+      
         if (!query) return setSearchResults([]);
 
         try {
@@ -50,11 +51,15 @@ function HomePage() {
         }
     };
 
+    const handleClearSearch = () => {
+      setSearchResults([]);
+    };
+
   return (
     <div className='homePage'>
 
         <div className="searchBar-container">
-            <SearchBar placeholder={"Search products"} onSearch={handleSearch} />
+            <SearchBar placeholder={"Search products"} onSearch={handleSearch} onClear={handleClearSearch} />
         </div>
 
       <div className="storeList">

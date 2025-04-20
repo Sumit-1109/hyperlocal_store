@@ -37,6 +37,7 @@ function StorePage() {
   }, [storeId]);
 
   const handleSearch = async (query) => {
+    
     if (!query) return setSearchResults([]);
 
     try {
@@ -50,9 +51,13 @@ function StorePage() {
       alert("Failed to Search Products");
       console.log(err);
     } finally {
-      dispatch(setLoading(false))
+      setLoading(false);
     }
   } 
+
+  const handleClearSearch = () => {
+    setSearchResults([]);
+  };
 
   return (
     <div className='storePage'>
@@ -62,8 +67,7 @@ function StorePage() {
       
     <div className="storeName">
         <p>{storeName}</p>
-        <SearchBar placeholder={`Search in ${storeName}`} onSearch={handleSearch} />
-
+        <SearchBar placeholder={`Search in ${storeName}`} onSearch={handleSearch} onClear={handleClearSearch} />
       </div>
 
       <div className="productsList">
