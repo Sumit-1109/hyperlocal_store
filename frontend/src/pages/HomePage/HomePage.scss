@@ -6,15 +6,18 @@
     gap: 6%;
     padding: 5% 6% 0 6%;
 
-    .searchBar{
-        width: 100%;
+    .searchBar-container{
         display: flex;
         justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 1rem;
     }
 
     .storeList{
         flex: 1;
         display: flex;
-        gap: 6%;
+        flex-wrap: wrap;
+        gap: 2rem;
     }
 }

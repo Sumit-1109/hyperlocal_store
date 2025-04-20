@@ -7,6 +7,7 @@ import StoreCard from '../../components/StoreCard/StoreCard';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import { searchProducts } from '../../services/products.service';
 import ProductCard from '../../components/ProductCard/ProductCard';
+import { setProducts } from '../../store/slices/products.slice';
 
 function HomePage() {
 
@@ -15,6 +16,9 @@ function HomePage() {
     const [searchResults, setSearchResults] = useState([]);
 
     useEffect(() => {
+
+        dispatch(setProducts([]));
+
         const fetchStores = async () => {
             try {
                 const res = await getStores();
@@ -49,7 +53,7 @@ function HomePage() {
   return (
     <div className='homePage'>
 
-        <div className="searchBar">
+        <div className="searchBar-container">
             <SearchBar placeholder={"Search products"} onSearch={handleSearch} />
         </div>
 

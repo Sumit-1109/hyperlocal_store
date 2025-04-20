@@ -9,8 +9,8 @@ function StoreCard({ name, location, id }) {
   return (
     <div className='storeCard' onClick={() => navigate(`/store/${id}`)}>
       <div className="info">
-      <p>{name}</p>
-      <p>( {location} )</p>
+      <p className='name'>{name}</p>
+      <p className='location'>( {location} )</p>
       </div>
         <div className="visit">
             <span className='visitText'>Visit</span>

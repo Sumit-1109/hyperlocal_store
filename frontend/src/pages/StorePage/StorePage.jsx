@@ -14,6 +14,7 @@ function StorePage() {
   const { storeId } = useParams();
   const [storeName, setStoreName] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  const [loading , setLoading] = useState(false);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -39,6 +40,7 @@ function StorePage() {
     if (!query) return setSearchResults([]);
 
     try {
+      setLoading(true)
       const res = await searchStoreProducts(storeId, query);
       if (res.status === 200) {
         const data = await res.json();
@@ -47,13 +49,18 @@ function StorePage() {
     } catch (err) {
       alert("Failed to Search Products");
       console.log(err);
+    } finally {
+      dispatch(setLoading(false))
     }
   } 
 
   return (
     <div className='storePage'>
-
-      <div className="storeName">
+{
+  !loading  && (
+    <>
+      
+    <div className="storeName">
         <p>{storeName}</p>
         <SearchBar placeholder={`Search in ${storeName}`} onSearch={handleSearch} />
 
@@ -63,12 +70,12 @@ function StorePage() {
       {
           searchResults.length > 0 ? (
             searchResults.map((product) => (
-              <ProductCard key={product._id} name={product.name} price={product.price} id={product._id} />
+              <ProductCard key={product._id} name={product.name} price={product.price} quantity={product.quantity} id={product._id} />
             ))
           ) : (
             products.length > 0 ? (
               products.map((product) => (
-                <ProductCard key={product._id} name={product.name} price={product.price} id={product._id} />
+                <ProductCard key={product._id} name={product.name} price={product.price} quantity={product.quantity} id={product._id} />
               ))
             ) : (
               <span>No Products Found !!</span>
@@ -76,6 +83,9 @@ function StorePage() {
           )
         }
       </div>
+    </>
+  )
+}
     </div>
   )
 }

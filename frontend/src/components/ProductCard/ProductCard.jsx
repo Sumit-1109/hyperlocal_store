@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { addToCart } from '../../store/slices/cart.slice';
 import { addToCartAPI } from '../../services/cart.service';
 
-function ProductCard({ name, price, id }) {
+function ProductCard({ name, price, id, quantity }) {
 
     const dispatch = useDispatch();
 
@@ -24,6 +24,7 @@ function ProductCard({ name, price, id }) {
       <div className="productInfo">
         <p>{name}</p>
         <p className='price'>Rs.{price}</p>
+        <p>In Stock : {quantity}</p>
       </div>
       <button className="addToCart" onClick={handleAddToCart}>Add to Cart</button>
     </div>

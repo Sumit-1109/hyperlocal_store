@@ -6,16 +6,24 @@ import { setShowModal } from '../../store/slices/showModal.slice';
 import { useNavigate } from 'react-router-dom';
 import { clearCartApi } from '../../services/cart.service';
 import { clearCart } from '../../store/slices/cart.slice';
+import { placeOrderAPI } from '../../services/order.service';
 
 function Modal() {
 
     const dispatch = useDispatch();
     const customerName = useSelector(state => state.customerName);
+    const cart = useSelector(state => state.cart); 
     const navigate = useNavigate();
     const [showError, setShowError] = useState(false);
 
     const handleOrder = async () => {
       if (customerName.trim() !== ''){
+        const products = cart.map(item => ({
+          id : item.id,
+          quantity : item.quantity
+        }));
+        console.log(products);
+        await placeOrderAPI(products);
         await clearCartApi();
         dispatch(clearCart());
         navigate('/order-confirmation')

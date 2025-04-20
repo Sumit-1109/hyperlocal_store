@@ -21,3 +21,17 @@
         padding-top: 3%;
 }
 }
+
+@media (max-width: 768px) {
+    .storePage{
+        overflow: hidden;
+
+        .storeName{
+            gap: 10px;
+            flex-direction: column;
+            padding-left: 0;
+            margin-bottom: 5px;
+        }
+
+    }
+}

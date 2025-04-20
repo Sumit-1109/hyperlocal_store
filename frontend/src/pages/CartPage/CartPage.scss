@@ -47,3 +47,15 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .cartPage{
+        flex-direction: column;
+
+        .cart-summary{
+            flex: 2;
+        }
+    }
+
+
+}

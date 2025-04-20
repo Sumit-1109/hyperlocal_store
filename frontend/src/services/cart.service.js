@@ -21,7 +21,7 @@ export const getCartAPI = async () => {
 
 export const increaseCartApi = async (id) => {
     return await fetch (`${URL}/api/orders/cart/increase/${id}`, {
-        method: 'GET',
+        method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
         }
@@ -30,15 +30,15 @@ export const increaseCartApi = async (id) => {
 
 export const decreaseCartApi = async (id) => {
     return await fetch (`${URL}/api/orders/cart/decrease/${id}`, {
-        method: 'GET',
+        method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
         }
     })
 }
 
-export const clearCartApi = async (id) => {
-    return await fetch (`${URL}/api/orders/cart/decrease/${id}`, {
+export const clearCartApi = async () => {
+    return await fetch (`${URL}/api/orders/cart/clear`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'

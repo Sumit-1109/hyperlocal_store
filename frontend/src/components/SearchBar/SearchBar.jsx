@@ -10,7 +10,8 @@ function SearchBar({ placeholder, onSearch }) {
   };
 
   return (
-    <form className="searchBar" onSubmit={handleSubmit}>
+    <div className="searchBar">
+      <form onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder={placeholder}
@@ -19,6 +20,7 @@ function SearchBar({ placeholder, onSearch }) {
       />
       <button type="submit">🔍</button>
     </form>
+    </div>
   );
 }
 
